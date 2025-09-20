@@ -7,21 +7,44 @@ let arr = [
 ];
 
 function PrintDeveloperbyMap() {
-  //Write your code here , just console.log
+  // Using .map to find developers
+  arr.map((employee) => {
+    if (employee.profession === "developer") {
+      console.log(employee);
+    }
+  });
 }
 
 function PrintDeveloperbyForEach() {
-  //Write your code here , just console.log
+  // Using .forEach to find developers
+  arr.forEach((employee) => {
+    if (employee.profession === "developer") {
+      console.log(employee);
+    }
+  });
 }
 
 function addData() {
-  //Write your code here, just console.log
+  // Adding a new employee and logging the updated array
+  const newEmployee = { id: 4, name: "susan", age: "20", profession: "intern" };
+  arr.push(newEmployee);
+  console.log(arr);
 }
 
 function removeAdmin() {
-  //Write your code here, just console.log
+  // Removing employees with profession 'admin' and logging the result
+  const filteredArr = arr.filter((employee) => employee.profession !== "admin");
+  console.log(filteredArr);
 }
 
 function concatenateArray() {
-  //Write your code here, just console.log
+  // Creating a new array and concatenating it with the original array
+  const newEmployees = [
+    { id: 5, name: "alice", age: "22", profession: "designer" },
+    { id: 6, name: "bob", age: "24", profession: "manager" },
+    { id: 7, name: "charlie", age: "21", profession: "tester" },
+  ];
+
+  const combinedArray = arr.concat(newEmployees);
+  console.log(combinedArray);
 }
